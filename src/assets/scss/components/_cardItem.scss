@@ -1,0 +1,16 @@
+@use '@scss/abstracts' as *;
+.card {
+  background-color: $card-bg-color;
+  padding: 1rem;
+  width: 100%;
+  height: 500px;
+
+  @include respond-to(md) {
+    padding: 0.5rem;
+  }
+
+  @include respond-to(lg) {
+    display: flex;
+    align-items: center;
+  }
+}

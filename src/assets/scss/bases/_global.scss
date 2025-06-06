@@ -1,0 +1,83 @@
+@use '@scss/abstracts' as *;
+
+/* 박스 모델 통일 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 기본 body 레이아웃 */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Pretendard', sans-serif;
+  background-color: #fff;
+  color: #212529;
+}
+
+/* App 구조 설정 */
+#app {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  > nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff;
+  }
+
+  > footer {
+    margin-top: auto; // footer를 가장 아래로
+  }
+}
+
+/* Header 스타일 */
+header {
+  line-height: 1.5;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+
+  .logo {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* ✅ 반응형: 데스크탑 이상 */
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: calc(var(--section-gap, 2rem) / 2);
+
+    .logo {
+      margin: 0 2rem 0 0;
+    }
+
+    .wrapper {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+  }
+
+  nav {
+    text-align: left;
+    margin-left: -1rem;
+    font-size: 1rem;
+    padding: 1rem 0;
+    margin-top: 1rem;
+  }
+}

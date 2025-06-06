@@ -1,0 +1,162 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Luis Mcmillan",
+      "email": "manager@gmail.com",
+      "role": "0",
+      "created_at": "2025-01-03T22:58:29",
+      "password": "123456"
+    },
+    {
+      "id": "2",
+      "name": "Melanie Chapman",
+      "email": "admin@gmail.com",
+      "role": "2",
+      "created_at": "2025-04-13T14:24:38",
+      "password": "123456"
+    },
+    {
+      "id": "3",
+      "name": "Michael Vega",
+      "email": "viewer@gmail.com",
+      "role": "1",
+      "created_at": "2025-03-18T17:58:14",
+      "password": "123456"
+    }
+  ],
+  "reservations": [
+    {
+      "id": "1",
+      "event_id": 1,
+      "user_id": 1,
+      "status": 1,
+      "reserved_at": "2025-06-01T10:00:00"
+    },
+    {
+      "id": "2",
+      "event_id": 1,
+      "user_id": 2,
+      "status": 2,
+      "reserved_at": "2025-06-02T11:30:00"
+    },
+    {
+      "id": "3",
+      "event_id": 1,
+      "user_id": 3,
+      "status": 2,
+      "reserved_at": "2025-06-02T11:30:00"
+    },
+    {
+      "id": "4",
+      "event_id": 2,
+      "user_id": 2,
+      "status": 1,
+      "reserved_at": "2025-07-01T09:15:00"
+    },
+    {
+      "id": "5",
+      "event_id": 2,
+      "user_id": 1,
+      "status": 1,
+      "reserved_at": "2025-07-15T13:45:00"
+    },
+    {
+      "id": "6",
+      "event_id": 3,
+      "user_id": 3,
+      "status": 2,
+      "reserved_at": "2025-06-25T16:00:00"
+    },
+    {
+      "id": "7",
+      "event_id": 4,
+      "user_id": 1,
+      "status": 3,
+      "reserved_at": "2025-07-30T10:30:00"
+    },
+    {
+      "id": "8",
+      "event_id": 5,
+      "user_id": 2,
+      "status": 1,
+      "reserved_at": "2025-08-01T11:00:00"
+    },
+    {
+      "id": "9",
+      "event_id": 2,
+      "user_id": 3,
+      "status": 2,
+      "reserved_at": "2025-07-18T15:20:00"
+    },
+    {
+      "id": "10",
+      "event_id": 3,
+      "user_id": 1,
+      "status": 1,
+      "reserved_at": "2025-06-28T18:05:00"
+    }
+  ],
+  "events": [
+    {
+      "location": "AUDITORIUM",
+      "category": "WORKSHOP",
+      "building": "B_DONG",
+      "status": 1,
+      "startDate": "2025-07-10",
+      "endDate": "2025-07-10",
+      "id": "1",
+      "title": "Vue 3 워크숍",
+      "capacity": 300,
+      "description": "Vue 3 Composition API 실습 중심 워크숍"
+    },
+    {
+      "id": "2",
+      "title": "Summer Music Concert",
+      "category": "WORKSHOP",
+      "status": 2,
+      "startDate": "2025-07-20T19:30:00",
+      "endDate": "2025-07-20T22:00:00",
+      "location": "AUDITORIUM",
+      "building": "A_DONG",
+      "capacity": 300,
+      "description": "Live performance from local indie bands."
+    },
+    {
+      "id": "3",
+      "title": "AI Tech Meetup",
+      "category": "PERFORMANCE",
+      "status": 3,
+      "startDate": "2025-06-28T18:00:00",
+      "endDate": "2025-06-28T21:00:00",
+      "location": "SEMINAR_ROOM_1",
+      "building": "B_DONG",
+      "capacity": 100,
+      "description": "Networking event for AI professionals and students."
+    },
+    {
+      "id": "4",
+      "title": "Modern Art Exhibition",
+      "category": "EXHIBITION",
+      "status": "cancelled",
+      "startDate": "2025-08-01T10:00:00",
+      "endDate": "2025-08-10T18:00:00",
+      "location": "SEMINAR_ROOM_2",
+      "building": "B_DONG",
+      "capacity": 200,
+      "description": "Featuring works from emerging modern artists."
+    },
+    {
+      "id": "5",
+      "title": "Modern Art Exhibition",
+      "category": "CLASS",
+      "status": "cancelled",
+      "startDate": "2025-08-01T10:00:00",
+      "endDate": "2025-08-10T18:00:00",
+      "location": "GALLERY",
+      "building": "C_DONG",
+      "capacity": 200,
+      "description": "Featuring works from emerging modern artists."
+    }
+  ]
+}

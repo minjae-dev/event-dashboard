@@ -1,0 +1,9 @@
+@use '@scss/abstracts' as *;
+
+.basic-footer {
+  padding: $padding-sm;
+  background-color: $header-bg-color;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

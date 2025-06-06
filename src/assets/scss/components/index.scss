@@ -1,0 +1,5 @@
+@use './common/basicModal'; // _basicModal.scss를 @use
+@use './common/basicHeader'; // _basicHeader.scss를 @use
+@use './common/basicFooter'; // _basicFooter.scss를 @use
+@use './cardList';
+@use './cardItem';

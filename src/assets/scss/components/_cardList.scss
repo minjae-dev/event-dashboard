@@ -1,0 +1,23 @@
+@use '@scss/abstracts' as *;
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.card-wrapper {
+  width: 100%; // 기본 모바일 기준
+  padding: 10px;
+
+  @include respond-to(sm) {
+    width: 50%;
+  }
+
+  @include respond-to(md) {
+    width: 33.3333%;
+  }
+
+  @include respond-to(lg) {
+    width: 25%;
+  }
+}

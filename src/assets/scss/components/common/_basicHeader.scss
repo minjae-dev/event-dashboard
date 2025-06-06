@@ -1,0 +1,6 @@
+@use '@scss/abstracts' as *;
+
+.basic-header {
+  padding: $padding-sm;
+  background-color: $header-bg-color;
+}

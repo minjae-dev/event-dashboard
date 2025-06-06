@@ -1,0 +1,9 @@
+@use '@scss/abstracts' as *;
+
+.root-layout {
+  min-width: 100vw;
+  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  background: $main-bg-color;
+}
