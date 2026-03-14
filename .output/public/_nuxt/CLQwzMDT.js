@@ -1,0 +1,1 @@
+import{g as a,o as t,c as o,a as n,b as s,y as r,W as c}from"./BbRNNrUR.js";const u={class:"content"},p=a({__name:"ManagerLayout",setup(_){return(l,e)=>(t(),o("main",u,[e[0]||(e[0]=n("h1",null,"매니저 레이아웃",-1)),s(r(c))]))}});export{p as default};

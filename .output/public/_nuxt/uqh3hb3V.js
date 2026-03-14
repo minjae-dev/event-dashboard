@@ -1,0 +1,1 @@
+import{_ as c,o as e,c as n,g as o,m as s}from"./BbRNNrUR.js";const t={};function _(a,r){return e(),n("main",null," user dashboard ")}const d=c(t,[["render",_]]),p=o({__name:"dashboard",setup(a){return(r,m)=>(e(),s(d))}});export{p as default};

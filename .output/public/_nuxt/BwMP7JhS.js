@@ -1,0 +1,1 @@
+import{T as a,k as r,U as i}from"./BbRNNrUR.js";const d=a(t=>{const e=useAuthStore(),o=r();if(["/manager","/admin"].some(s=>t.path.startsWith(s))&&!e.isLogin)return o.error("권한이 없습니다."),i("/login")});export{d as default};

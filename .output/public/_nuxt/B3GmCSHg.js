@@ -1,0 +1,1 @@
+import{B as t,a}from"./DvFK273y.js";import{g as r,o as s,c,b as e,P as n}from"./BbRNNrUR.js";import"./BrmbTzg4.js";import"./6IApx-LT.js";import"./Mc_uTPkO.js";const i={class:"root-layout"},B=r({__name:"default",setup(m){return(o,p)=>(s(),c("div",i,[e(t),n(o.$slots,"default"),e(a)]))}});export{B as default};

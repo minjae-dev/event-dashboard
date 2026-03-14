@@ -1,0 +1,1 @@
+import{_ as a}from"./BKo0obQo.js";import e from"./JABKa0iw.js";import{g as s,o as n,c as r,a as m,b as o,w as i}from"./BbRNNrUR.js";import"./7Hdbeu9E.js";import"./CvaAaUy1.js";const _={class:"content"},h=s({__name:"AdminLayout",setup(c){return(p,t)=>(n(),r("main",_,[t[0]||(t[0]=m("h1",null,"관리자 레이아웃",-1)),o(e,null,{default:i(()=>[o(a)]),_:1})]))}});export{h as default};

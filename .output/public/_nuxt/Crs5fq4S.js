@@ -1,0 +1,1 @@
+import{B as e,a as t}from"./DvFK273y.js";import{g as a,o as r,c as s,b as o,y as c,W as i}from"./BbRNNrUR.js";import"./BrmbTzg4.js";import"./6IApx-LT.js";import"./Mc_uTPkO.js";const n={class:"root-layout"},y=a({__name:"RootLayout",setup(m){return(p,_)=>(r(),s("div",n,[o(e),o(c(i)),o(t)]))}});export{y as default};

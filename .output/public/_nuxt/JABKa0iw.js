@@ -1,0 +1,1 @@
+import{_ as r,o as s,c as t,a as e,P as n}from"./BbRNNrUR.js";const l={};function c(a,o){return s(),t("div",null,[o[0]||(o[0]=e("header",{class:"mb-4 border-bottom pb-2"},[e("h1",null,"데시보드 레이아웃")],-1)),e("main",null,[n(a.$slots,"default")])])}const u=r(l,[["render",c]]);export{u as default};

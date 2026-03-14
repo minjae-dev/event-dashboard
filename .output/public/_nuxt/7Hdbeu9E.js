@@ -1,0 +1,1 @@
+import{a as e,b as s}from"./CvaAaUy1.js";async function n(a){return await e(()=>s.get(`/users?email=${a}`))}async function i(){return await e(()=>s.get("/users"))}async function u(a,t){return await e(()=>s.patch(`/users/${a}`,{role:t}))}export{i as a,n as g,u};

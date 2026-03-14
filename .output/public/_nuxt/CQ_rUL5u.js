@@ -1,0 +1,1 @@
+import{_ as t,o as n,c as o,a,P as r}from"./BbRNNrUR.js";const c={},l={class:"content"};function d(s,e){return n(),o("main",l,[e[0]||(e[0]=a("h1",null,"관리자 레이아웃",-1)),r(s.$slots,"default")])}const f=t(c,[["render",d]]);export{f as default};
