@@ -25,25 +25,18 @@ const cardListLabel = ref('이벤트 목록')
 
 const portfolioSites = ref<IPortfolioSite[]>([
   {
-    name: 'Event Dashboard (현재 서비스)',
+    name: 'Event Dashboard (현재 프로젝트)',
     url: '/login',
     status: '데모',
-    memberSystem: '로그인 / 권한 분기 (관리자, 매니저, 일반 사용자)',
-    description: '회원 권한 기반으로 라우트와 접근 제어가 동작하는 관리자형 웹 앱입니다.',
+    memberSystem: '이메일 로그인 / 역할 기반 접근 제어(관리자·매니저·일반 회원)',
+    description: '회원 인증 후 권한별 대시보드로 분기되는 포트폴리오 데모입니다.',
   },
   {
-    name: 'Campus Booking Platform',
-    url: 'https://portfolio.example.com/campus-booking',
-    status: '운영 중',
-    memberSystem: '이메일 가입, 비밀번호 재설정, 예약 히스토리',
-    description: '시설 예약 중심 서비스로 회원의 예약 내역 및 알림 기능을 포함합니다.',
-  },
-  {
-    name: 'Creator Community Hub',
-    url: 'https://portfolio.example.com/community-hub',
-    status: '운영 중',
-    memberSystem: '소셜 로그인, 프로필 관리, 권한별 게시글 관리',
-    description: '커뮤니티 기반 서비스로 회원 활동 및 관리자 모니터링 기능이 포함됩니다.',
+    name: 'Admin Dashboard Member Demo',
+    url: '/admin/dashboard',
+    status: '데모',
+    memberSystem: '회원 검색, 권한 변경, 가입일 모니터링',
+    description: '관리자가 회원을 직접 조회/관리하는 과정을 즉시 확인할 수 있습니다.',
   },
 ])
 
@@ -71,15 +64,23 @@ onMounted(async () => {
 <template>
   <div class="home-view">
     <section class="portfolio-section mb-4">
-      <h2 class="mb-3">포트폴리오</h2>
+      <h2 class="mb-3">포트폴리오 & 관리자 데모</h2>
       <p class="text-muted mb-3">
-        회원 시스템이 포함된 운영/데모 사이트를 빠르게 확인할 수 있도록 정리했습니다.
+        회원 시스템이 포함된 포트폴리오와 관리자 회원 관리 데모를 바로 확인할 수 있습니다.
       </p>
+
+      <div class="alert alert-info mb-3">
+        <strong>체험 계정</strong><br>
+        관리자: <code>admin@gmail.com / 123456</code><br>
+        매니저: <code>manager@gmail.com / 123456</code><br>
+        일반 회원: <code>viewer@gmail.com / 123456</code>
+      </div>
+
       <div class="row g-3">
         <div
           v-for="site in portfolioSites"
           :key="site.name"
-          class="col-12 col-lg-4"
+          class="col-12 col-lg-6"
         >
           <article class="portfolio-card h-100 p-3 border rounded bg-white">
             <div class="d-flex justify-content-between align-items-center mb-2">
@@ -90,11 +91,9 @@ onMounted(async () => {
             <p class="small mb-2"><strong>회원 시스템:</strong> {{ site.memberSystem }}</p>
             <a
               :href="site.url"
-              target="_blank"
-              rel="noreferrer"
               class="btn btn-sm btn-outline-dark"
             >
-              사이트 보기
+              바로 보기
             </a>
           </article>
         </div>
