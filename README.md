@@ -30,6 +30,17 @@ Vue 3, TypeScript, Pinia 기반의 대시보드 웹 애플리케이션입니다.
 
 ---
 
+## 🔗 포트폴리오 / 관리자 데모 확인 방법
+
+1. 홈 화면(` / `)의 **포트폴리오 & 관리자 데모** 섹션에서 바로 이동
+2. 로그인 후 권한별 대시보드 접근
+   - 관리자: `admin@gmail.com / 123456`
+   - 매니저: `manager@gmail.com / 123456`
+   - 일반 회원: `viewer@gmail.com / 123456`
+3. 관리자 회원 관리 데모: `/admin/dashboard`
+
+---
+
 ## 🧩 폴더 구조
 
 ```bash
@@ -52,6 +63,7 @@ src/
 
 - 로그인 (유저, 매니저, 관리자)
 - 이벤트 및 예약 현황 조회/수정
+- 관리자 회원 검색/권한 변경 데모
 
 ---
 
@@ -64,6 +76,18 @@ npm run dev
 ```
 
 앱: http://localhost:5173
+
+---
+
+## 🚢 배포
+
+이 저장소에는 GitHub Pages 자동 배포 워크플로우(`.github/workflows/deploy-pages.yml`)가 포함되어 있습니다.
+
+1. GitHub 저장소에서 **Settings → Pages → Build and deployment → Source**를 `GitHub Actions`로 변경
+2. 기본 브랜치에 push 하면 `Deploy to GitHub Pages` 워크플로우가 실행
+3. 배포 URL: `https://<github-username>.github.io/<repository-name>/`
+
+> 참고: 로컬에서는 `npm run build`로 배포 산출물(`dist/`) 생성 여부를 검증할 수 있습니다.
 
 ---
 
