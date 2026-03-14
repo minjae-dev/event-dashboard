@@ -72,32 +72,9 @@ onMounted(async () => {
       <div class="alert alert-info mb-3">
         <strong>체험 계정</strong><br>
         관리자: <code>admin@gmail.com / 123456</code><br>
-        매니저: <code>manager@gmail.com / 123456</code><br>
         일반 회원: <code>viewer@gmail.com / 123456</code>
       </div>
 
-      <div class="row g-3">
-        <div
-          v-for="site in portfolioSites"
-          :key="site.name"
-          class="col-12 col-lg-6"
-        >
-          <article class="portfolio-card h-100 p-3 border rounded bg-white">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-              <h3 class="h6 mb-0">{{ site.name }}</h3>
-              <span class="badge text-bg-primary">{{ site.status }}</span>
-            </div>
-            <p class="small text-muted mb-2">{{ site.description }}</p>
-            <p class="small mb-2"><strong>회원 시스템:</strong> {{ site.memberSystem }}</p>
-            <a
-              :href="site.url"
-              class="btn btn-sm btn-outline-dark"
-            >
-              바로 보기
-            </a>
-          </article>
-        </div>
-      </div>
     </section>
 
     <CardList

@@ -1,4 +1,4 @@
-import axios from 'axios'
+import { getEventById, getEvents } from '@/apis/events/eventApi'
 import { defineStore } from 'pinia'
 import type { Ref } from 'vue'
 import { ref } from 'vue'
@@ -8,16 +8,14 @@ export const useEventStore = defineStore('eventStore', () => {
   const selectedEvent: Ref<any | null> = ref(null)
 
   const fetchEvents = async () => {
-    const res = await axios.get('http://localhost:4000/events')
-    events.value = res.data
+    const response = await getEvents({ page: 1, limit: 9999 })
+    events.value = response?.data ?? []
   }
 
   const fetchEventById = async (id: number) => {
-    const res = await axios.get(`http://localhost:4000/events/${id}`)
-    selectedEvent.value = res.data
+    const response = await getEventById(String(id))
+    selectedEvent.value = response?.data?.[0] ?? null
   }
-
-  
 
   return {
     events,

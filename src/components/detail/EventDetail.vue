@@ -72,7 +72,7 @@ const updateField = (field: keyof EventDataType, value: any) => {
           <input
             type="date"
             class="form-control"
-            :value="modelValue?.startDate ?? ''"
+            :value="modelValue?.endDate ?? ''"
             :readonly="role !== USER_ROLE.ADMIN"
             @input="role === USER_ROLE.ADMIN && updateField('endDate', $event.target.value)"
           />
@@ -126,7 +126,7 @@ const updateField = (field: keyof EventDataType, value: any) => {
           <option
             v-for="key in Object.keys(EVENT_CATEGORY)"
             :key="key"
-            :value="EVENT_CATEGORY[key]"
+            :value="key"
           >
             {{ EVENT_CATEGORY[key] }}
           </option>
@@ -144,7 +144,7 @@ const updateField = (field: keyof EventDataType, value: any) => {
           <option
             v-for="key in Object.keys(LOCATION_CATEGORY)"
             :key="key"
-            :value="LOCATION_CATEGORY[key]"
+            :value="key"
           >
             {{ LOCATION_CATEGORY[key] }}
           </option>

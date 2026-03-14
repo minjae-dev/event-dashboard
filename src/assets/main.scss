@@ -5,10 +5,10 @@
 @use 'scss/bases/index' as *;
 
 // 4. Layouts (grid, header, footer 등 레이아웃 관련)
-@use '@scss/layouts/index' as *;
+@use 'scss/layouts/index' as *;
 
 // 5. Views (뷰별 스타일: Dashboard, Login
-@use '@scss/views/index' as *;
+@use 'scss/views/index' as *;
 
 // 6. Components (버튼, 카드, 모달 등 개별 컴포넌트)
-@use '@scss/components/index' as *;
+@use 'scss/components/index' as *;

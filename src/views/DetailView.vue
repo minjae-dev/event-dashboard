@@ -4,8 +4,6 @@ import VideoDetail from '@/components/detail/EventDetail.vue';
 import { USER_ROLE } from '@/models/Constants';
 import type { EventDataType } from '@/models/Event';
 import { useAuthStore } from '@/stores/authStore';
-import { formatDate } from '@/uses/common';
-import { buildingCategoryMapper, eventCategoryMapper, eventStatusMapper, locationCategoryMapper } from '@/uses/enumMapping';
 import { onMounted, ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { useToast } from 'vue-toastification';
@@ -32,14 +30,10 @@ const detailData = ref<EventDataType>(defaultData);
 onMounted(async () => {
   const response = await getEventById(route.params.id as string);
   if (response && response.data.length > 0) {
-    const { location, category, building, status, startDate, endDate, ...rest } = response.data[0];
+    const { startDate, endDate, ...rest } = response.data[0];
     detailData.value = {
-      location: locationCategoryMapper(location),
-      category: eventCategoryMapper(category),
-      building: buildingCategoryMapper(building),
-      status: eventStatusMapper(status),
-      startDate: formatDate(startDate),
-      endDate: formatDate(endDate),
+      startDate: String(startDate).slice(0, 10),
+      endDate: String(endDate).slice(0, 10),
       ...rest
     }
   } else {
@@ -62,8 +56,12 @@ const labelByRole = () => {
 // notes
 
 const handleClickSaveBtn = async () => {
+  const response = await updateEvent(route.params.id as string, detailData.value);
+  if (!response) {
+    toast.error('수정에 실패했습니다. 잠시 후 다시 시도해주세요.')
+    return
+  }
 
-  await updateEvent(route.params.id as string, detailData.value);
   toast.success('수정되었습니다')
   router.back();
 };

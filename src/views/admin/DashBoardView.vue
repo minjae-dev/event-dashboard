@@ -43,6 +43,7 @@ const changeRole = async (user: IUserAdmin, role: string) => {
   const response = await updateUserRole(String(user.id), role)
   if (response?.data) {
     user.role = response.data.role
+    await fetchUsers()
   }
   syncingUserId.value = null
 }

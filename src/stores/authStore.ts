@@ -4,6 +4,8 @@ import { defineStore } from 'pinia'
 import { computed, ref } from 'vue'
 
 export const useAuthStore = defineStore('authStore', () => {
+  const canUseStorage = () => import.meta.client
+
   const user = ref<IUser>({
     id: null,
     role: null, // '1' or '2'
@@ -19,30 +21,37 @@ export const useAuthStore = defineStore('authStore', () => {
   const setUserRole = (role: string) => {
     if (role === USER_ROLE.ADMIN || role === USER_ROLE.USER || role === USER_ROLE.MANAGER) {
       user.value.role = role
-      localStorage.setItem('userRole', user.value.role)
+      if (canUseStorage()) {
+        localStorage.setItem('userRole', user.value.role)
+      }
     }
   }
 
   function getUserRole() {
+    if (!canUseStorage()) return user.value?.role
     return localStorage.getItem('userRole') || user.value?.role
   }
 
   function login(newToken: string, newRole: string) {
     token.value = newToken
     role.value = newRole
-    localStorage.setItem('accessToken', token.value)
+    if (canUseStorage()) {
+      localStorage.setItem('accessToken', token.value)
+    }
   }
 
   function logout() {
     token.value = ''
     role.value = ''
-    localStorage.removeItem('accessToken')
-    localStorage.removeItem('userRole')
+    if (canUseStorage()) {
+      localStorage.removeItem('accessToken')
+      localStorage.removeItem('userRole')
+    }
   }
 
   const isLogin = computed<boolean>(() => {
-    const accessToken = localStorage.getItem('accessToken')
-    return (!!token.value && token.value.length > 0) || accessToken
+    const accessToken = canUseStorage() ? localStorage.getItem('accessToken') : null
+    return !!((token.value && token.value.length > 0) || accessToken)
   })
 
   return {

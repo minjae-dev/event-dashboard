@@ -1,7 +1,11 @@
 import axios, { AxiosError, type AxiosInstance, type AxiosResponse } from 'axios'
 
+const defaultBaseURL = import.meta.server
+  ? process.env.NUXT_PUBLIC_API_BASE_URL || 'http://localhost:3000/api'
+  : '/api'
+
 export const apiClient: AxiosInstance = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000',
+  baseURL: import.meta.env.VITE_API_BASE_URL || defaultBaseURL,
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json',

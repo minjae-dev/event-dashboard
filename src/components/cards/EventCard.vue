@@ -44,14 +44,6 @@
           >
             이벤트 상세보기
           </a>
-          <a
-            id="status"
-            @click="onStatusClick"
-            target="_blank"
-            class="btn btn-primary btn-sm ms-2"
-          >
-            예약 현황보기
-          </a>
         </li>
       </ul>
     </div>
