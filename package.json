@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "nuxt dev",
     "build": "nuxt build",
+    "start": "node .output/server/index.mjs",
     "preview": "nuxt preview",
     "typecheck": "nuxt typecheck",
     "lint": "eslint . --fix",
@@ -31,7 +32,6 @@
     "eslint": "^9.22.0",
     "eslint-plugin-vue": "~10.0.0",
     "jiti": "^2.4.2",
-    "json-server": "^1.0.0-beta.3",
     "prettier": "3.5.3",
     "sass-embedded": "^1.89.1",
     "typescript": "~5.8.0",
