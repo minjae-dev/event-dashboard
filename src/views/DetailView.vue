@@ -3,16 +3,16 @@ import { getEventById, updateEvent } from '@/apis/events/eventApi';
 import VideoDetail from '@/components/detail/EventDetail.vue';
 import { USER_ROLE } from '@/models/Constants';
 import type { EventDataType } from '@/models/Event';
-import router from '@/router';
 import { useAuthStore } from '@/stores/authStore';
 import { formatDate } from '@/uses/common';
 import { buildingCategoryMapper, eventCategoryMapper, eventStatusMapper, locationCategoryMapper } from '@/uses/enumMapping';
 import { onMounted, ref } from 'vue';
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 import { useToast } from 'vue-toastification';
 const toast = useToast()
 
 const route = useRoute();
+const router = useRouter();
 const { getUserRole } = useAuthStore()
 // notes
 const defaultData = {

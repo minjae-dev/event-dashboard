@@ -43,7 +43,7 @@ function clickCardHandler(eventId: number, eventTarget: EventTarget) {
     toast.error('로그인 후 이용가능');
     router.push({ path: `/login` });
   } else {
-    router.push({ path: target.id === 'detail' ? `eventDetail/${eventId}` : `reservations/${eventId}` });
+    router.push({ path: target.id === 'detail' ? `/eventDetail/${eventId}` : `/reservations/${eventId}` });
   }
 }
 </script>

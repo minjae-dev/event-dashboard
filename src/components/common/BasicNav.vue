@@ -14,27 +14,27 @@ const logout = (): void => {
   <header class="basic-header">
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <RouterLink
+        <NuxtLink
           class="navbar-brand"
           to="/"
-        >Home</RouterLink>
+        >Home</NuxtLink>
         <div
           class="collapse navbar-collapse"
           id="navbarNavDropdown"
         >
           <ul class="navbar-nav">
             <li class="nav-item">
-              <RouterLink
+              <NuxtLink
                 v-if="authStore.isLogin"
                 to="/"
                 class="nav-link active"
                 @click.prevent="logout"
-              >Logout</RouterLink>
-              <RouterLink
+              >Logout</NuxtLink>
+              <NuxtLink
                 v-else
                 to="/login"
                 class="nav-link active"
-              >Login</RouterLink>
+              >Login</NuxtLink>
             </li>
           </ul>
         </div>
