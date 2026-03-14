@@ -1,6 +1,11 @@
 @use '@scss/abstracts' as *;
+
 .dash-board-view {
   padding: $padding-lg;
   width: 100%;
   height: 100%;
+
+  .member-role-select {
+    width: 140px;
+  }
 }
